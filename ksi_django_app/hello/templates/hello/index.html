@@ -1,85 +1,28 @@
+{% load static %}
+<!DOCTYPE = html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Landing KSI</title>
-    <style>
-    body{
-        background-color: #06283D;
-    }
-    div {
-        margin-top: 100px;
-        margin-bottom: 100px;
-        margin-right: 150px;
-        margin-left: 80px;
-        padding-top: 50px;
-        padding-right: 30px;
-        padding-bottom: 50px;
-        padding-left: 80px;
-    }
-    h1 {
-        text-align: center;
-        color: #FBF2CF;
-        font-weight: bold;
-        font-size: 80px;
-    }
-    p {
-        text-align: center;
-        color: #47B5FF;
-        font-family: "Times New Roman", Times, serif;
-    }
-    .button {
-        border-radius: 4px;
-        background-color: #256D85;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 25px;
-        padding: 20px;
-        width: 160px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 5px;
-      }
-      
-      .button span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-      }
-      
-      .button span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s;
-      }
-      
-      .button:hover span {
-        padding-right: 25px;
-      }
-      
-      .button:hover span:after {
-        opacity: 1;
-        right: 0;
-      }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome Back !!!</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="icon" href="{% static "image/anya.jpg" %}">
   </head>
   <body>
     <div>
-        <h1>
-            Hello World
-        </h1>
-    <p>
-        Django Merespon Page Ini
-    </p>
-    <br>
-    <center>
-    <a href="https://linktr.ee/inskie" target="_blank" class="button"><span>About Me ! </span></a>
-    </center>
+      <h1>Hello World</h1>
+      <img src="{% static "image/anya.jpg" %}" alt="">
+      <p>
+        Hallo, Nama saya Bryan Samperura.
+        <br />
+        Ingin tau tentang saya? Bisa klik dibawah button dibawah ini.
+      </p>
+      <br />
+      <center>
+        <a href="https://linktr.ee/inskie" target="_blank" class="button"
+          ><span>About Me ! </span></a
+        >
+      </center>
     </div>
   </body>
 </html>
