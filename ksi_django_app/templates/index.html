@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE = html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Text</title>
+    <link rel="stylesheet" href="{% static 'css/form.css' %}" />
+    <link rel="icon" href="{% static "image/anya.webp" %}">
+  </head>
+  <body>
+    <div class="center">
+      <h1>{{ heading }}</h1>
+      <form method="post">
+        {% csrf_token %}
+        <div class="txt_field">
+          <input type="text" name="username" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="text"name="address" required>
+          <span></span>
+          <label>Alamat</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Submit">
+        <div class="signup_link">
+            <h3>Hasil Dari Inputan Dibawah Ini</h3>
+            <p>Nama : {{ username }}</p>
+            <p>Alamat : {{ address }}</p>
+          </div>
+      </form>
+    </div>
+  </head>
+  </body>
+  </html>
