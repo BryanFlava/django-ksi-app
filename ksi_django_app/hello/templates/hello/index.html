@@ -6,12 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Welcome Back !!!</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="icon" href="{% static "image/anya.jpg" %}">
+    <link rel="icon" href="{% static "image/anya.webp" %}">
   </head>
   <body>
-    <div>
+    <header>
+      <img class="logo" src="{% static "image/logo.webp" %}" alt="logo">
+        <nav>
+          <ul class="nav_links">
+            <li><a class="link" href="{% url 'index' %}">Home</a></li>
+            <li><a class="link" href="{% url 'hello:index' %}">Blog</li>
+            <li><a class="link" href="{% url 'about:index' %}">About</a></li>
+          </ul>
+    </header>
+    <div class="tes">
       <h1 class="text">Hello World</h1>
-      <img src="{% static "image/anya.jpg" %}" alt="">
+      <img class="gambar" src="{% static "image/walk-anya.jpg" %}" alt="">
       <p>
         Hallo, Nama saya Bryan Samperura.
         <br />
@@ -21,12 +30,21 @@
       <center>
         <a href="https://linktr.ee/inskie" target="_blank" class="button"
           ><span>About Me ! </span></a>
-          <h1 class="text1">Hi, This new project by 1204041_Bryan</h1>
-          <h1 class="text2">This is a pictures of Django</h1>
-          <h2>Django was create fall of 2023</h2>
-          <h3>Testing Django</h3>
-          <a href="https://linktr.ee/inskie" target="_blank"><span>Link ! </span></a>
       </center>
     </div>
+    <div>
+      {% block content-1 %}
+      {% for v in post %}
+        <div>
+            <h1 class="text">Data Postingan</h1>
+            <img class="gambar" src="{% static "image/anya.jpg" %}" alt="">
+            <p>Title : {{ v.title }}</p>
+            <p>Isi postingan : {{ v.body }}</p>
+            <p>Email : {{ v.email }}</p>
+            <p>Slug : {{ v.slug }}</p>
+        </div>
+    {% endfor %}
+    {% endblock content-1 %}
+      </div>
   </body>
 </html>
