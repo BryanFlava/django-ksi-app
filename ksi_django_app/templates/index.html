@@ -4,13 +4,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Text</title>
+    <title>Form Anya</title>
     <link rel="stylesheet" href="{% static 'css/form.css' %}" />
     <link rel="icon" href="{% static "image/anya.webp" %}">
   </head>
   <body>
     <div class="center">
       <h1>{{ heading }}</h1>
+      <center>
+        
+        </center>
       <form method="post">
         {% csrf_token %}
         <div class="txt_field">
@@ -23,10 +26,14 @@
           <span></span>
           <label>Alamat</label>
         </div>
-        <div class="pass">Forgot Password?</div>
         <input type="submit" value="Submit">
+        <br>
+        <br>
+        <center>
+        Menuju ke Halaman <a class="pass" href="{% url 'hello:index' %}">Blog</a>
+        </center>
         <div class="signup_link">
-            <h3>Hasil Dari Inputan Dibawah Ini</h3>
+            <h3>Hasil Inputan :</h3>
             <p>Nama : {{ username }}</p>
             <p>Alamat : {{ address }}</p>
           </div>
