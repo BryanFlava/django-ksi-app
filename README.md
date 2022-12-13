@@ -22,8 +22,6 @@ Aplikasi dibangun menggunakan :
 - [HTML] - Untuk membantu dalam membuat fuction dan sistemnya
 - [CSS] - Mempercantik UI/UX dari aplikasi WEB ini.
 
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
 
 ## Installation
 
