@@ -1,4 +1,4 @@
-# Aplikasi Web (Static - Dinamis) - Framework Djan
+# Aplikasi Web (Static - Dinamis) - Framework Django
 ## _Bryan Samperura (1204041) Universitas Logistik & Bisnis_
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
