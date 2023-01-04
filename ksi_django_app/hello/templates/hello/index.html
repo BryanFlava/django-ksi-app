@@ -45,8 +45,38 @@
         </div>
     {% endfor %}
     {% endblock content-1 %}
-      </div>
 
-      
+{% comment %} 
+FROM DJAGO
+{% endcomment %}
+      <a class='btn btn-success' href="{% url 'form' %}">Tambah</a> 
+  <table class="table">
+    <thead>
+       <tr>
+          <th scope="col">#</th>
+          <th scope="col">Judul</th> 
+          <th scope="col">Body</th> 
+          <th scope="col">E-mail</th> 
+          <th scope="col">Hapus</th> 
+          <th scope="col">Update</th> 
+      </tr>
+  </thead>
+    <tbody>
+      {% for v in post %}
+    <tr>
+      <th_scope="row">{{ forloop.counter }}</th>
+      <td>{{v.id}}</td>
+      <td>{{v.title}}</td>
+      <td>{{v.body}}</td> 
+      <td>{{v.email}}</td>
+      {% comment %} <td>{{v.email}}</td> {% endcomment %}
+      <td><a class="btn btn-danger" href="{% url 'hello:delete' v.id %}"> Hapus</a></td>
+      <td><a class="btn btn-warning" href="{% url 'update' v.id %}">Update </a></td>
+    </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+</div>
   </body>
 </html>

@@ -29,6 +29,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', include('hello.urls', namespace='hello')),
     path('about/', include('about.urls', namespace='about')),
-    re_path(r'^articles/(?P<year>[0-9]{4})/$', views.articles),
+        path('form/', views.form, name='form'),
+    re_path(r'^articles/(?P<year>[0-9]{4})/$', views.articles, name='dinamis'),
+    re_path(r'^delete/(?P<year>[0-9]+)/$', views.delete, name='delete'),
+    re_path(r'^update/(?P<year>[0-9]+)/$', views.update, name='update'),
     path('', index),
     ]
