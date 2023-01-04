@@ -28,6 +28,8 @@ Aplikasi dibangun menggunakan :
 Dalam membuka aplikasi ini ada beberapa tahap yaitu :
 
 ```sh
+pip install --upgrade django
+pip mysqlclient
 activate
 cd ../..
 cd ksi-django-app
